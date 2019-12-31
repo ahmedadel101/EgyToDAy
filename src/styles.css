@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    background-image: url('/assets/images/backgroud1.jpg') !important;
+    background-size: cover;
+    height: 730px;
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        background-image: url('/assets/images/backgroud1.jpg') !important;
+        background-size: cover;
+        height: 100%;
+    }
+}
+.a
+{
+    font-size: 20px;
+}

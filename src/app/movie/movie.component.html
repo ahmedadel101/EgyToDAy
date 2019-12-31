@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="container pt-4 text-light">
+        <div class="navPagintaion   m-auto text-center ">
+            <ul class="list-unstyled d-flex justify-content-around">
+                <li *ngFor="let page of pages " (click)='changePages(page)'>{{page}}</li>
+            </ul>
+        </div>
+        <div class="row">
+            <div *ngFor="let movie of allMovies ; let i = index"  class="py-3 col-md-3">
+                
+                <div class="movieName text-center my-4">
+                    <a [routerLink]="['/moviedetails',i]">
+                        <img class="img-fluid" [src]="imgUrl+movie.poster_path"/>
+                        <span class="voteAverages">{{movie.vote_average}}</span>
+
+                        <div class="movieDesc">
+                            <h3 class="py-1 text-light">{{movie.original_title}}</h3>
+                            <h6>release_date : {{movie.release_date}}</h6>
+                            <span> Language : {{movie.original_language}}</span>
+
+                        </div>
+                    </a>  
+                </div>
+            </div>
+        </div>
+
+        <div class="navPagintaion w-25 m-auto text-center ">
+            <ul class="list-unstyled d-flex justify-content-around">
+                <li *ngFor="let page of pages " (click)='changePages(page)'>{{page}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="container mt-2">
+        <div class="row">
+            <div *ngFor="let user of usersContainers" class=" col-md-4">
+                <div class="grid-b p-3">
+                    <a href="{{user.url}}" target="_blank"><img class="img-fluid" [src]="user.urlToImage"></a>
+                    <h4>{{user.title}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
